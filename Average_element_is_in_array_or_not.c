@@ -1,7 +1,6 @@
 #include<stdio.h>
-int main()
-{
-    int n,i,sum=0,avg,c=0;
+int main(){
+    int n,i,sum=0,c=0,avg;
     scanf("%d",&n);
     int a[n];
     for(i=0;i<n;i++){
@@ -13,13 +12,11 @@ int main()
     }
     for(i=0;i<n;i++){
         if(avg==a[i]){
-           c=1;
+            c=1;
         }
     }
-    if(c==1){
-        printf("True");
-    }
-    else{
-        printf("False");
-    }
+    if(c==1)
+    printf("True");
+    else
+    printf("False");
 }
