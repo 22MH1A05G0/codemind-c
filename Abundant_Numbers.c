@@ -1,15 +1,28 @@
-#include<stdio.h>
-int main()
-{
-    int n,i,sum=0;
-    scanf("%d",&n);
-    for(i=1;i<n;i++){
-       if(n%i==0){
-            sum=sum+i;
+#include <stdio.h>
+
+// Function to check if a number is abundant
+int isAbundant(int number) {
+    int sum = 0;
+    for (int i = 1; i <= number / 2; i++) {
+        if (number % i == 0) {
+            sum += i;
         }
     }
-    if(sum>n)
-    printf("True");
-    else
-    printf("False");
+    
+    return sum > number;
 }
+
+int main() {
+    int number;
+
+   
+    scanf("%d", &number);
+
+    if (isAbundant(number)) {
+        printf("True");
+    } else {
+        printf("False");
+    }
+}
+
+   
